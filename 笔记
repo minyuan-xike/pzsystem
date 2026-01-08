@@ -1,0 +1,2 @@
+创建路由和对应页面{src下创建目录router，router下创建index.js文件}
+scr下创建views,views下创建main.vue
