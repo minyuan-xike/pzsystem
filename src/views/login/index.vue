@@ -3,4 +3,4 @@
         登录
     </div>
 </template>
-<script sestup></script>
+<script setup></script>
