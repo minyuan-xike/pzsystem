@@ -1,16 +1,5 @@
 <template>
-   <el-menu
-        active-text-color="#ffd04b"
-        background-color="#545c64"
-        class="aside-container"
-        default-active="2"
-        text-color="#fff"
-        @open="handleOpen"
-        @close="handleClose"
-      >
-      <p class="logo-lg">DIDI陪诊</p>
-      <TreeMenu />
-        <!-- <el-sub-menu index="1">
+        <el-sub-menu index="1">
           <template #title>
             <el-icon><location /></el-icon>
             <span>Navigator One</span>
@@ -38,27 +27,13 @@
         <el-menu-item index="4">
           <el-icon><setting /></el-icon>
           <span>Navigator Four</span>
-        </el-menu-item> -->
-      </el-menu>
+        </el-menu-item>
+    
 </template>
-
-
 <script setup>
-import treeMenu from './treeMenu.vue';
-const handleOpen = ()=> {}
-const handleClose = () => {}
 </script>
 
 
 
-<style lang="less" scoped>
-.aside-container{
-  height: 100%;
-  .logo-lg{
-    font-size: 20px;
-    text-align: center;
-    line-height: 50px;
-    color: #fff;
-  }
-}
-</style>
+<style scoped></style>
+
