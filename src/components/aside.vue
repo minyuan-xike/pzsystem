@@ -10,7 +10,7 @@
       >
       <p class="logo-lg">DIDI陪诊</p>
       <TreeMenu />
-        <!-- <el-sub-menu index="1">
+        <el-sub-menu index="1">
           <template #title>
             <el-icon><location /></el-icon>
             <span>Navigator One</span>
@@ -38,13 +38,17 @@
         <el-menu-item index="4">
           <el-icon><setting /></el-icon>
           <span>Navigator Four</span>
-        </el-menu-item> -->
+        </el-menu-item>
       </el-menu>
 </template>
 
 
 <script setup>
 import treeMenu from './treeMenu.vue';
+import {useRouter} from 'vue-router'
+const router = useRouter()
+console .log(router ,'router')
+
 const handleOpen = ()=> {}
 const handleClose = () => {}
 </script>
