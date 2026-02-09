@@ -1,16 +1,16 @@
 <template>
-   <el-menu
+      <el-menu
         active-text-color="#ffd04b"
+        class="aside-container" 
         background-color="#545c64"
-        class="aside-container"
-        default-active="2"
+        efault-active="2"
         text-color="#fff"
         @open="handleOpen"
         @close="handleClose"
       >
       <p class="logo-lg">DIDI陪诊</p>
-      <TreeMenu />
-        <el-sub-menu index="1">
+      <TreeMenu :index="1" :menuData="menuData"/>
+        <!-- <el-sub-menu index="1">
           <template #title>
             <el-icon><location /></el-icon>
             <span>Navigator One</span>
@@ -27,6 +27,8 @@
             <el-menu-item index="1-4-1">item one</el-menu-item>
           </el-sub-menu>
         </el-sub-menu>
+   
+
         <el-menu-item index="2">
           <el-icon><icon-menu /></el-icon>
           <span>Navigator Two</span>
@@ -38,16 +40,23 @@
         <el-menu-item index="4">
           <el-icon><setting /></el-icon>
           <span>Navigator Four</span>
-        </el-menu-item>
+        </el-menu-item> -->
       </el-menu>
+  
 </template>
 
 
 <script setup>
 import treeMenu from './treeMenu.vue';
 import {useRouter} from 'vue-router'
+import {reactive} from 'vue'
+
+
 const router = useRouter()
-console .log(router ,'router')
+const menuData = reactive(router.options.routes[0].children)
+
+
+// console .log(router ,'router')
 
 const handleOpen = ()=> {}
 const handleClose = () => {}
@@ -58,11 +67,13 @@ const handleClose = () => {}
 <style lang="less" scoped>
 .aside-container{
   height: 100%;
+  // background-color: blue;
   .logo-lg{
     font-size: 20px;
     text-align: center;
     line-height: 50px;
     color: #fff;
+    // background-color: pink;
   }
 }
 </style>
