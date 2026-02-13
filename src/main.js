@@ -1,7 +1,8 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
-import router from './router/index.js'
+import router from './router/index.js'  //main.js 就是 Vue 应用的“入口文件”，所有全局的东西都应该放这里配置。
+
 
 
 // 拿到图标后全局遍历，然后app.进行全局注册。

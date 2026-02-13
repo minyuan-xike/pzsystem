@@ -1,5 +1,5 @@
 <template>
-  
+  <div>console</div>
 </template>
 
 <script setup>
